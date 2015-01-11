@@ -37,7 +37,7 @@ end
 
   def place_player_marker(player)
      position = player.select_position!
-     puts "#{player} selects #{player.marker} position #{position}"
+     puts "#{player} selects #{player.marker} at position #{position}."
      @board[position] = player.marker
    end
 
@@ -186,3 +186,6 @@ Game.new(ComputerPlayer, ComputerPlayer).play
 puts
 players_with_human = [HumanPlayer, ComputerPlayer].shuffle
 Game.new(*players_with_human).play
+
+
+# need to add an 'exit' or 'quit' feature
